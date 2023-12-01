@@ -1,3 +1,7 @@
+.background {
+    background-color: var(--cl-white);
+    border-bottom: 1px solid var(--cl-text-black);
+}
 .container {
     max-width: 1440px;
     margin: 0 auto;

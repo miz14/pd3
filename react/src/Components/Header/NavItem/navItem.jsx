@@ -16,7 +16,7 @@ class NavItem extends React.Component {
                     <span className="name">{this.props.name}</span>
                     {this.props.count? <span className="count">{"(" + this.props.count + ")"}</span> : null}
                 </div>
-                <rect className={"line" + (this.props.status == "1"? " line-active": null)}/>
+                <div className={"line" + (this.props.status == "1"? " line-active": null)}/>
             </button>
         )
     }

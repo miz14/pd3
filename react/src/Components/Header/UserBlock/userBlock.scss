@@ -1,0 +1,22 @@
+.register-block {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    padding: 8px 24px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    button {
+        color: var(--cl-text-black);
+        font-family: "Roboto";
+        font-size: 16px;
+        font-weight: 400;
+    }
+    div {
+        height: 24px;
+        width: 2px;
+        background-color: var(--cl-text-black);
+        border-radius: 1px;
+    }
+}

@@ -1,0 +1,35 @@
+:root {
+  //colors
+  --cl-text-black: #353232; //Цвет текста(темный)
+  --cl-text-white: #F5F5F5; //Цвет текста(светлый)
+  --cl-main-blue: #00A1FC; //Яркий 1
+  --cl-white: #FFFFFF; //Цвет белый 1
+  --cl-back1: #F3F3F3; //Цвет белый 2
+  --cl-back2: #E1E1E1; //Светлый фон
+  --cl-text-gray: #7C7C7C; //Цвет текста(серый)
+  --cl-lime: #6FFC00; //Яркий 2
+  --cl-text-green: #4FFF40; //Принято
+  --cl-text-red: #FF3131; //Удалить
+  //other
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/Fonts/Roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/Fonts/Roboto/Roboto-Black.ttf");
+  font-weight: 800;
+}
+body, ul, button {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}

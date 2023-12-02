@@ -1,4 +1,4 @@
-button {
+.nav_item {
     display: flex;
     height: 46px;
     flex-direction: column;
@@ -8,7 +8,7 @@ button {
     background: none;
     border: none;
 
-    div {
+    .name_block {
         display: flex;
         justify-content: center;
         gap: 6px;
@@ -33,7 +33,7 @@ button {
         height: 2px;
         border-radius: 1px;
     }
-    .line-active {
+    .line_active {
         background-color: var(--cl-text-black);
     }
 }

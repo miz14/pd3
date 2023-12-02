@@ -1,26 +1,14 @@
 import React from "react";
-import "./navItem.scss";
+import css from "./navItem.module.scss";
 
-class NavItem extends React.Component {
-    constructor(props) {
-        super(props)
-        this.name = {width: props.name}
-        this.count = {count: props.count}
-        this.status = {status: props.status}
-    }
-
-    render() {
-        return(
-            <button>
-                <div>
-                    <span className="name">{this.props.name}</span>
-                    {this.props.count? <span className="count">{"(" + this.props.count + ")"}</span> : null}
-                </div>
-                <div className={"line" + (this.props.status == "1"? " line-active": null)}/>
-            </button>
-        )
-    }
-
-}
-
-export default NavItem
+export default function NavItem({name, count, status}) {
+    return(
+        <button className={css.nav_item}>
+            <div className={css.name_block}>
+                <span className={css.name}>{name}</span>
+                {count? <span className={css.count}>{"(" + count + ")"}</span> : null}
+            </div>
+            <div className={css.status + (status == "1"? css.line_active : null)}/>
+        </button>
+    )
+};

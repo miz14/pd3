@@ -1,13 +1,13 @@
-import "./header.scss"
+import css from "./header.module.scss"
 import NavItem from "./NavItem/navItem";
 import UserBlock from "./UserBlock/userBlock";
 
 
-const Header = () => {
+export default function Header() {
     return (
-        <div className="background">
+        <div className={css.background}>
             <div className="container">
-                <div className="main-block">
+                <div className={css.main_block}>
                     <nav>
                         <ul>
                             <li>
@@ -27,5 +27,3 @@ const Header = () => {
         </div>
     )
 }
-
-export default Header;

@@ -1,55 +1,20 @@
-import "./TableLabels.scss";
-import { Component } from "react";
+import css from "./TableLabels.module.scss";
 
-class TableLabels extends Component {
-    constructor(props) {
-        super(props)
-        this.columns = {columns: props.columns}
-    }
-
-    render() {
-        const col = this.props.columns;
-        const col_data = []
-        for (let i = 0; i < col.length; i++) {
-            col_data.push(
-                <>
-                <th className="label-col">
-                {col[i]}
-                </th>
-                <th className="label-line">
-
-                </th>
-                </>
-            )
-        }
-        // const col_data = col.map((el, i) => 
-            
-        //     <th key={i} scope="col" className="label-col">
-        //         {el}
-        //     </th>
-        //     <th scope="col" className="label-line">
-
-        //     </th>
-            
-            
-        // )
-        return (
-            <tr className="table-label">
-                {col_data}
-                {/* {col.map((el, idx) => {
-                    return (
-
-                        <th key = {idx} scope="col" className="label-col">
-                            {el}
-                        </th>
-                        // <th key = {idx} scope="col" className="label-line">
-
-                        // </th>
-                    )
-                })} */}
-            </tr> 
+export default function TableLabels({columns}) {
+    const col_data = []
+    for (let i = 0; i< 2 * columns.length - 1; i++) {
+        if (i % 2 == 0) col_data.push(
+        <div key={i/2} className={css.label_col}>
+            {columns[i/2]}
+        </div>
         )
+        else col_data.push(<div key={i/2} className={css.label_line}/>)
     }
-}
+    return (
+        <div className={css.table_label}>
 
-export default TableLabels;
+            {col_data}
+            
+        </div> 
+    )
+};

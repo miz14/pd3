@@ -1,0 +1,15 @@
+.time_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    span {
+        vertical-align: middle;
+        color: var(--cl-text-black);
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        align-items: center;
+    }
+}

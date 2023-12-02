@@ -1,4 +1,4 @@
-.register-block {
+.register_block {
     display: flex;
     flex-direction: row;
     height: 60px;
@@ -12,6 +12,8 @@
         font-family: "Roboto";
         font-size: 16px;
         font-weight: 400;
+        background: none;
+        border: none;
     }
     div {
         height: 24px;

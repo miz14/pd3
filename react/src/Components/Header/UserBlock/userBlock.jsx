@@ -1,13 +1,13 @@
-import "./userBlock.scss";
+import css from "./userBlock.module.scss";
 
-const UserBlock = () => {
+export default function UserBlock() {
     
     return (
-        <div className="register-block">
+        <div className={css.register_block}>
             <button>
                 Регистрация
             </button>
-            <div/>
+            <div></div>
             <button>
                 Вход
             </button>
@@ -15,5 +15,3 @@ const UserBlock = () => {
         </div>
     )
 }
-
-export default UserBlock;

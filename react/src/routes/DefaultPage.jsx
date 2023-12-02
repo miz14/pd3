@@ -2,7 +2,7 @@ import Header from "../Components/Header/header"
 import TableLabels from "../Components/ListPageMaket/TableLabels/tableLabels";
 import ListPageMaket from "../Components/ListPageMaket/listPagemaket";
 
-const DefaultPage = () => {
+export default function DefaultPage() {
     
     return(
         <>
@@ -11,5 +11,3 @@ const DefaultPage = () => {
         </>
     )
 }
-
-export default DefaultPage;

@@ -1,0 +1,36 @@
+.table_label{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+
+    .value {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% *1170/1440);
+        .label_col {
+            padding: 0 10px;
+            display: flex;
+            justify-content: center;
+            color: var(--cl-text-black);
+            text-align: center;
+            font-family: "Roboto";
+            font-size: 22px;
+            font-weight: 500;
+        }
+        tr {
+            display: flex;
+            gap: 29px;
+        }
+        .label_line {
+            width: 2px;
+        }
+        .label_line_color {
+            background-color: var(--cl-text-black);
+            height: 30px;
+            border-radius: 1px;
+            background-color: var(--cl-text-black);
+        }
+    }
+}

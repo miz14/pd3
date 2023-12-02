@@ -1,12 +1,19 @@
-.main_block {
+.list_page_maket_block {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 
     .options {
-        background-color: var(--cl-text-white);
+        background-color: var(--cl-back1);
         display: flex;
         padding: 40px 25px;
         border-radius: 0 0 15px 15px;
-        width: 100%;
+    }
+    .data {
+        .data_element:nth-child(2n+1) {
+            width: 100%;
+            background-color: var(--cl-back1);
+            border-radius: 15px;
+        }
     }
 }

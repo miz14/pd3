@@ -1,0 +1,12 @@
+.main_block {
+    display: flex;
+    flex-direction: column;
+
+    .options {
+        background-color: var(--cl-text-white);
+        display: flex;
+        padding: 40px 25px;
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+    }
+}

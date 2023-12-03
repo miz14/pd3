@@ -28,10 +28,15 @@
 }
 @font-face {
   font-family: "Roboto";
+  src: url("./assets/Fonts/Roboto/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Roboto";
   src: url("./assets/Fonts/Roboto/Roboto-Black.ttf");
   font-weight: 800;
 }
-body, ul, button {
+body, ul, button, h3 {
   margin: 0;
   padding: 0;
 }

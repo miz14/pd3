@@ -1,36 +1,91 @@
+@import url("../listPageMaket.module.scss");
+
 .table_label{
     display: flex;
-    padding: 15px;
+    padding: 11px 15px;
     align-items: center;
     justify-content: space-between;
 
-    .value {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .left {
         width: calc(100% *1170/1440);
-        .label_col {
-            padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;    
+
+        .value {
             display: flex;
-            justify-content: center;
-            color: var(--cl-text-black);
-            text-align: center;
-            font-family: "Roboto";
-            font-size: 22px;
-            font-weight: 500;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .label_col {
+                padding: 0 10px;
+                display: flex;
+                justify-content: center;
+                color: var(--cl-text-black);
+                text-align: center;
+                font-family: "Roboto";
+                font-size: 22px;
+                font-weight: 500;
+            }
+            tr {
+                display: flex;
+                gap: 29px;
+            }
+            .label_line {
+                width: 2px;
+            }
+            .label_line_color {
+                background-color: var(--cl-text-black);
+                height: 30px;
+                border-radius: 1px;
+                background-color: var(--cl-text-black);
+            }
         }
-        tr {
+
+        .problem {
             display: flex;
-            gap: 29px;
-        }
-        .label_line {
-            width: 2px;
-        }
-        .label_line_color {
-            background-color: var(--cl-text-black);
-            height: 30px;
-            border-radius: 1px;
-            background-color: var(--cl-text-black);
+            justify-content: space-between;
+            align-items: center;
+            .problem_label {
+
+                color: var(--cl-text-black);
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: 500;
+                width: calc(100% * 150/1170);
+                display: flex;
+                justify-content: center;
+
+            }
+            .problem_place {
+                width: calc(100% * 990/1170);
+                padding: 5px 8px 10px 8px;
+                border: 1px solid var(--cl-text-gray);
+                border-radius: 5px;
+                
+                background-color: var(--cl-text-white);
+                .problem_place_text {
+                    
+                    background: linear-gradient(
+                        to bottom,
+                        rgb(0, 0, 0 ,0),
+                        rgb(0, 0, 0 ,0) 21px,
+                        var(--cl-back2) 21px,
+                        var(--cl-back2) 22px,
+                        
+                      );
+                    background-size: 100% 22px;
+                    color: var(--cl-text-black);
+                    font-family: Roboto;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 160%
+                }
+                
+            }
         }
     }
+}
+.table_label_bg {
+    background-color: var(--cl-back2);
 }

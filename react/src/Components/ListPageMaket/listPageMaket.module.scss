@@ -9,11 +9,12 @@
         padding: 40px 25px;
         border-radius: 0 0 15px 15px;
     }
-    .data {
-        .data_element:nth-child(2n+1) {
-            width: 100%;
-            background-color: var(--cl-back1);
-            border-radius: 15px;
-        }
+}
+.table_label:nth-child(2n+1) {
+    background-color: var(--cl-back1);
+    border-radius: 15px;
+    .problem_place {
+        background-color: var(--cl-white) !important;       
     }
+    
 }

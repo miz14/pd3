@@ -8,7 +8,7 @@ export default function NavItem({name, count, status}) {
                 <span className={css.name}>{name}</span>
                 {count? <span className={css.count}>{"(" + count + ")"}</span> : null}
             </div>
-            <div className={css.status + (status == "1"? css.line_active : "")}/>
+            <div className={css.line + " " + (status == 1? css.line_active : "")}/>
         </button>
     )
 }

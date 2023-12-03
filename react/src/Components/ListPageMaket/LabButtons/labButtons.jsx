@@ -12,7 +12,7 @@ export default function LabButtons() {
             <button className={css.skip}>
                 <img src={skip}/>
             </button>
-            <button class={css.accept}>
+            <button className={css.accept}>
                 <img src={accept}/>
             </button>
         </div>

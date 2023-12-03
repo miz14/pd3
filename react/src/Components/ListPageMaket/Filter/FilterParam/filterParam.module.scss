@@ -1,0 +1,20 @@
+.filter_param_block {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    h3 {
+        color: var(--cl-text-black);
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .param_list {
+        background-color: var(--cl-back2);
+        border: 1px solid var(--cl-text-black);
+        height: 30px;
+        width: 130px;
+        border-radius: 4px;
+        color: var(--cl-text-gray);
+
+    }
+}

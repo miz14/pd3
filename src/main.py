@@ -6,7 +6,7 @@ from auth.schemas import UserRead, UserCreate
 from labs.router import router as router_labs
 
 app = FastAPI(
-    title="Trading App"
+    title="Tumas App"
 )
 
 app.include_router(

@@ -1,10 +1,11 @@
+from typing import List
 from fastapi import APIRouter, Depends
 from sqlalchemy import select, insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from database import get_async_session
 from labs.models import lab
-from src.labs.schemas import LabCreate
+from labs.schemas import LabCreate
 # from labs.schemas import LabsCreate
 
 router = APIRouter(
@@ -13,7 +14,7 @@ router = APIRouter(
 )
 
 
-@router.get("/")
+@router.get("/", response_model=List[LabCreate])
 async def get_labs(lab_id: int, session: AsyncSession = Depends(get_async_session)):
     query = select(lab).where(lab.c.id == lab_id)
     result = await session.execute(query)

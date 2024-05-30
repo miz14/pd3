@@ -1,0 +1,14 @@
+.labform_bg {
+    position: fixed;
+    height: 100vh;
+    // width: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    .labform {
+       background-color: rgb(145, 145, 145);
+       padding: 20px; 
+    }
+}

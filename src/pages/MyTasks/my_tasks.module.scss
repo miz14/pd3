@@ -1,0 +1,43 @@
+@import url('../../index.css');
+
+.mytask {
+    display: flex;
+    width: 100%;
+    color: var(--text-color-dark);
+    height: 100vh;
+    .left_column {
+        border-left: 1px solid var(--text-color-dark);
+        border-right: 1px solid var(--text-color-dark);
+        width: 210px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        padding: 20px;
+
+        h4 {
+            margin-top: 5px;
+            margin-bottom: 2px;
+            font-weight: 700;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .add_button {
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        .add_button_content {
+            background-image: url('../../assets/plus.svg');
+            background-repeat: no-repeat;
+            background-position: left center;
+            padding-left: 30px;
+            
+        }
+        .groups {
+            font-size:14px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}

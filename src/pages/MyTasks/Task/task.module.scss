@@ -1,0 +1,31 @@
+.task {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+    .task_info {
+        background-color: var(--text-color-light);
+        border-radius: 0 0 10px 10px;
+        padding: 20px 40px;
+        h2 {
+            margin-top: 0;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            .group {
+                background-color: var(--theme-color-1);
+                color: var(--white-color-1);
+                margin-right: 4px;
+                padding: 2px;
+                border-radius: 4px;
+                font-size: 14px;
+                line-height: 14px;
+
+            }
+            .teacher {
+                
+            }
+        }
+    }
+}

@@ -21,29 +21,53 @@
 
 
   --bg-color-light: #e1e1e1;
+  --bg-color-light-dark: #cccbcb;
 
   --theme-color-1: #00A1FC;
   --theme-color-2: #ff3131;
   --theme-color-3: #6ffc00;
   --theme-color-4: #4fff40;
+
+  --theme-color-1-dark: #0089d8;
+  --theme-color-2-dark: #db3131;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
-  margin: 0 8px;
+  margin: 0;
+  padding: 0 8px;
+  min-width: 1000px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+input {
+  background-color: var(--white-color-1);
+  color: var(----text-color-dark);
+  outline: none;
+  border: 1px solid var(--text-color-gray);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: 'Roboto';
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
-  src: url('./assets/Roboto-font/Roboto-Light') format('ttf');
+  src: url('./assets/Roboto-font/Roboto-Light.ttf');
 }
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/Roboto-font/Roboto-Regular') format('ttf');
+  src: url('./assets/Roboto-font/Roboto-Regular.ttf')
 }
 
 @font-face {

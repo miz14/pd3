@@ -6,20 +6,45 @@ const authSlice = createSlice({
     initialState: {
         token: localStorage.getItem('token') || null,
         name: localStorage.getItem('name') || null,
-        type: 'teacher'
+        type: 'teacher', //localStorage.getItem('type') || null,
+        id: localStorage.getItem('id') || null
     },
     reducers: {
         login(state, action) {
-            state.token = action.payload.token
-            state.name = action.payload.name
-            localStorage.setItem('token', action.payload.token)
-            localStorage.setItem('name', action.payload.name)
-            console.log(["login", state.token, state.name])
+            if (action.payload.token != undefined) {
+                state.token = action.payload.token
+                localStorage.setItem('token', action.payload.token)
+            }
+            if (action.payload.name != undefined) {
+                state.name = action.payload.name
+                localStorage.setItem('name', action.payload.name)
+            }
+            if (action.payload.type != undefined) {
+                state.type = action.payload.type
+                localStorage.setItem('type', action.payload.type)
+            }
+            if (action.payload.id != undefined) {
+                state.id = action.payload.id
+                localStorage.setItem('id', action.payload.id)
+            }
+            console.log(
+                {
+                    token: state.token,
+                    name: state.name,
+                    id: state.id,
+                    type: state.type
+                }
+            )
         },
         logout(state) {
             state.token = null
             state.name = null
-            console.log(["logout", state.token, state.name])
+            state.type = null
+            state.id = null
+            localStorage.removeItem('token')
+            localStorage.removeItem('name')
+            localStorage.removeItem('type')
+            localStorage.removeItem('id')
         }
     }
 })

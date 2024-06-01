@@ -1,4 +1,5 @@
 import HotWorksLaboratory from "../../components/HotWorksLaboratory/hotworks_laboratory";
+import style from './hotworks.module.scss'
 
 const HotWorks = () => {
 
@@ -44,7 +45,7 @@ const HotWorks = () => {
 
     return(
         <>
-        <div>
+        <div className={style.filters}>
             <input placeholder="Предмет"></input>
             <input placeholder="Группа"></input>
             <button>Применить</button>

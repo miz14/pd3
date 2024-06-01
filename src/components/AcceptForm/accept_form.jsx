@@ -1,16 +1,16 @@
-import style from './delete_accept_form.module.scss'
+import style from './accept_form.module.scss'
 
-const DeleteAcceptForm = ({active, setActive, delete_action}) => {
+const AcceptForm = ({active, setActive, accept_action, accept_text}) => {
 
-    const delete_accept = () => {
-        delete_action()
+    const accept = () => {
+        accept_action()
         setActive(false)
     }
     return (
         active?
         <div className={style.form_bg}>
             <div className={style.form}>
-                <button onClick={() => delete_accept}>Удалить</button>
+                <button onClick={() => accept}>{accept_text}</button>
                 <button onClick={() => setActive(false)}>Отмена</button>
                 
             </div>
@@ -20,4 +20,4 @@ const DeleteAcceptForm = ({active, setActive, delete_action}) => {
     )
 }
 
-export default DeleteAcceptForm
+export default AcceptForm

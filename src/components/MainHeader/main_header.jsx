@@ -23,7 +23,7 @@ const MainHeader = () => {
                 <NavLink to='/requests' className={useCallback(({isActive}) => classNames(style.navitem, isActive? style.navitem_active : null))}>
                     Запросы {auth.type === USER_TYPE.teacher? '(123)' : null}
                 </NavLink>
-                {auth.name === null ?
+                {auth.token === null ?
                     <div className={style.navitem} onClick={() => navigate("/login")}>Вход</div>
                     :
                     <div className={style.navitem} onClick={() => dispatch(logout())}>Выход</div>

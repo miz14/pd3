@@ -88,7 +88,6 @@ const Login = () => {
     }
     function handleSelect(data) {
         set_selected_group(data)
-        console.log(data.id - 100)
     }
 
     const accept_login = async () => {

@@ -17,9 +17,15 @@
     transition-property: background-color, color;
     transition-duration: 0.1s;
     transition-timing-function: ease-out;
-    align-items: center;
-    display: flex;
-    justify-content: center;
+
+    // display: block;
+    min-width:auto !important;
+
+    // marig
+    // align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // min-width: ;
 }
 
 .default:hover {
@@ -44,6 +50,7 @@
 }
 .bg_color_2 {
     background-color: var(--theme-color-2);
+    color: var(--white-color-1)
 }
 .bg_color_2:hover {
     background-color: var(--theme-color-2-dark);

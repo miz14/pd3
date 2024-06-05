@@ -18,10 +18,10 @@ const MainHeader = () => {
             <header className={style.container}>
                 <NavLink to='/tasks' className={useCallback(({isActive}) => classNames(style.navitem, isActive? style.navitem_active : null))}>Мои задания</NavLink>
                 <NavLink to='/hotworks' className={useCallback(({isActive}) => classNames(style.navitem, isActive? style.navitem_active : null))}>
-                    Горящие работы {auth.type === USER_TYPE.teacher? '(123)' : null}
+                    Горящие работы
                 </NavLink>
                 <NavLink to='/requests' className={useCallback(({isActive}) => classNames(style.navitem, isActive? style.navitem_active : null))}>
-                    Запросы {auth.type === USER_TYPE.teacher? '(123)' : null}
+                    Запросы
                 </NavLink>
                 {auth.token === null ?
                     <div className={style.navitem} onClick={() => navigate("/login")}>Вход</div>

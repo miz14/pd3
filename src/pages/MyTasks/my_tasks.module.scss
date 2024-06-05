@@ -6,7 +6,7 @@
     color: var(--text-color-dark);
     height: 100vh;
     .left_column {
-        border-left: 1px solid var(--text-color-dark);
+        
         border-right: 1px solid var(--text-color-dark);
         width: 210px;
         flex-shrink: 0.1;
@@ -38,8 +38,7 @@
             background-image: url('../../assets/plus.svg');
             background-repeat: no-repeat;
             background-position: left center;
-            padding-left: 30px;
-            
+            padding-left: 30px;  
         }
         .groups {
             font-size:14px;
@@ -54,4 +53,18 @@
             background-color: var(--bg-color-light);
         }
     }
+}
+.discipline_form {
+    min-width: 400px;
+    h3 {
+        margin-top: 0;
+    }
+    .buttons {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+    }
+}
+.select {
+    margin-bottom: 10px;
 }

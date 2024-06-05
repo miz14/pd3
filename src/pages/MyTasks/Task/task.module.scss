@@ -3,48 +3,129 @@
     flex-direction: column;
     width: 100%;
     margin-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid var(--text-color-dark);
+
     .task_info {
         background-color: var(--text-color-light);
         border-radius: 0 0 10px 10px;
         padding: 20px 40px;
+
         // height: 130px;
         h2 {
             margin-top: 0;
         }
+
         .row {
             display: flex;
-            justify-content: space-between;
+            // justify-content: space-between;
+            gap: 50px;
+            align-items: center;
+            .teachers {
+                display: flex;
+                gap:4px;
+                // flex-direction: column;
+                flex-wrap: wrap;
+            }
+            .change_button_content {
+                background-image: url('../../../assets/edit.svg');
+                background-repeat: no-repeat;
+                background-position: left center;
+                padding-left: 30px;
+            }
+            .delete_button_content{
+                background-image: url('../../../assets/trash.svg');
+                background-repeat: no-repeat;
+                background-position: left center;
+                padding-left: 30px;
+            }
+
             .group {
                 background-color: var(--theme-color-1);
                 color: var(--white-color-1);
                 margin-right: 4px;
-                padding: 2px;
+                padding: 4px;
                 border-radius: 4px;
                 font-size: 14px;
                 line-height: 14px;
-
+                font-weight: 500;
             }
+
             .teacher {
-                
+                background-color: var(--theme-color-3);
+                color: var(--white-color-1);
+                margin-right: 4px;
+                padding: 4px;
+                border-radius: 4px;
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 500;
             }
         }
     }
+
     .labs {
         // width: 100%;
         // margin-right: auto;
         position: relative;
         display: grid;
-        grid-template-columns: repeat(4, auto);//repeat(4, minmax(50px, 1fr));
-        .deadline {
-            background: url('../../../assets/clock.svg');
+        grid-template-columns: repeat(4, auto); //repeat(4, minmax(50px, 1fr));
+
+        .status {
+            display: flex;
+            // height: 45px;
+            align-items: center;
+            background-color: var(--bg-color-light);
+            border-radius: 10px;
+            padding: 0px 10px;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color-gray);
+            font-weight: 600;
+            
+        }
+        .date {
+            display:flex;
+            flex-direction: column;
+            gap:5px;
+            align-items: center;
+            font-size: 14px;
+            .deadline {
+                background: url('../../../assets/clock.svg');
+                background-repeat: no-repeat;
+                background-position: left center;
+                padding-left: 25px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .updatetime {
+
+                background: url('../../../assets/clock2.svg');
+                background-repeat: no-repeat;
+                background-position: left -1px;
+                padding-left: 25px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+        .add_button_content {
+            background-image: url('../../../assets/plus.svg');
             background-repeat: no-repeat;
             background-position: left center;
-            
-            padding-left: 25px;
+            padding-left: 30px;
+        }
+
+        .labs_add {
+            padding-left: 70px;
         }
     }
 
-    .labs > * {
+    .labs>* {
         // min-height: 70px;
         padding: 12px;
         display: flex;
@@ -52,41 +133,85 @@
         justify-content: center;
         align-items: center;
     }
-    .labs > *:nth-child(8n) {
+
+    .labs>*:nth-child(8n) {
         background-color: var(--white-color-2);
         border-radius: 0 10px 10px 0;
     }
-    
+
     .labs_column {
         position: relative;
     }
-    .labs_column:not(:nth-child(3)) > h3::after{
-        content:'';
+
+    .labs_column:not(:nth-child(3))>h3::after {
+        content: '';
         width: 2px;
-        height:30%;
-        display:block;
+        display: block;
         background-color: var(--text-color-dark);
-        position:absolute;
+        position: absolute;
         right: 0;
         top: 30px;
+        bottom: 30px;
         border-radius: 5px;
-      }
-    .labs > *:nth-child(8n - 1),  .labs > *:nth-child(8n - 2) {
+    }
+
+    .labs>*:nth-child(8n - 1),
+    .labs>*:nth-child(8n - 2) {
         background-color: var(--white-color-2);
         // border-radius: 0 8px 8px 0;
     }
-    .labs > *:nth-child(8n - 3) {
+
+    .labs>*:nth-child(8n - 3) {
         background-color: var(--white-color-2);
         border-radius: 10px 0 0 10px;
     }
+
     .lab_buttons {
         display: flex;
         // width: 100%;
         justify-content: end;
         gap: 10px;
+        .status {
+            min-width: 100px;
+        }
     }
-    .lab_buttons > * {
+
+    .lab_buttons>* {
         width: 60px;
         height: 45px;
+    }
+
+}
+
+.teacher_lab_edit_form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    input, .select {
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+    }
+}
+
+.delete_lab_from {
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
     }
 }

@@ -25,7 +25,7 @@
 
   --theme-color-1: #00A1FC;
   --theme-color-2: #ff3131;
-  --theme-color-3: #6ffc00;
+  --theme-color-3: #fc7a00;
   --theme-color-4: #4fff40;
 
   --theme-color-1-dark: #0089d8;
@@ -40,11 +40,14 @@ body {
   margin: 0;
   padding: 0 8px;
   min-width: 1000px;
+  /* background: linear-gradient(#ffffff, #969696); */
 }
+
 p {
   margin: 0;
   padding: 0;
 }
+
 input {
   background-color: var(--white-color-1);
   color: var(----text-color-dark);
@@ -92,6 +95,19 @@ input {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
+}
+
+main {
+  border: 1px solid var(--text-color-dark);
+  border-bottom: none;
+}
+
+.need_login {
+  margin: auto auto;
+  padding-bottom: 200px;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--text-color-gray)
 }

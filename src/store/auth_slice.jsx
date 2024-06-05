@@ -6,7 +6,7 @@ const authSlice = createSlice({
     initialState: {
         token: localStorage.getItem('token') || null,
         name: localStorage.getItem('name') || null,
-        type: 'teacher', //localStorage.getItem('type') || null,
+        type: localStorage.getItem('type') || null,
         id: localStorage.getItem('id') || null
     },
     reducers: {
@@ -24,7 +24,7 @@ const authSlice = createSlice({
                 localStorage.setItem('type', action.payload.type)
             }
             if (action.payload.id != undefined) {
-                state.id = action.payload.id
+                state.id = Number(action.payload.id)
                 localStorage.setItem('id', action.payload.id)
             }
             console.log(

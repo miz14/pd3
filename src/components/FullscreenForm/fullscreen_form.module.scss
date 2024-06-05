@@ -1,4 +1,4 @@
-.labform_bg {
+.bg {
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -15,9 +15,10 @@
         pointer-events: none;
     }
 
-    .labform {
-        background-color: rgb(145, 145, 145);
+    .form {
+        background-color: var(--white-color-1);
         padding: 20px;
+        border-radius: 10px;
         // la
     }
 }

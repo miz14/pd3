@@ -32,6 +32,7 @@
   --theme-color-2-dark: #db3131;
 }
 
+
 button {
   cursor: pointer;
 }
@@ -94,6 +95,12 @@ input {
   src: url('./assets/Roboto-font/Roboto-Black.ttf');
 }
 
+* {
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -101,7 +108,8 @@ input {
 
 main {
   border: 1px solid var(--text-color-dark);
-  border-bottom: none;
+  /* border-bottom: none; */
+  min-height: 100vh;
 }
 
 .need_login {

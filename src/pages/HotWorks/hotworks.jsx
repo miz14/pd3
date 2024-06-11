@@ -173,8 +173,8 @@ return (
 
                             <>
                                 <div className={style.date}>
-                                    <div className={style.deadline}>{tranform_time(x.deadline)}</div>
                                     <div className={style.updatetime}>{tranform_time(x.loading_time)}</div>
+                                    <div className={style.deadline}>{tranform_time(x.deadline)}</div>
                                 </div>
                                 <div>{x.count_try}</div>
                                 <div>{x.discipline.name}</div>
@@ -184,7 +184,7 @@ return (
                                     <CustomButton content={<img src={doc_img} />}></CustomButton>
                                     {x.status === false && auth.type === USER_TYPE.teacher ?
                                         <>
-                                            <CustomButton onClick={() => dany_lab(x.student_laboratory_id)} content={<img src={down_img} />}></CustomButton>
+                                            <CustomButton onClick={() => dany_lab(x.student_laboratory_id)} bg_color_id={2} content={<img src={down_img} />}></CustomButton>
                                             <CustomButton onClick={() => accept_lab(x.student_laboratory_id)} bg_color_id={1} content={<img src={accept_img} />}></CustomButton>
                                         </>
                                         :

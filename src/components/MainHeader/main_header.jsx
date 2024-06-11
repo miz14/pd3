@@ -20,9 +20,12 @@ const MainHeader = () => {
                 <NavLink to='/hotworks' className={useCallback(({isActive}) => classNames(style.navitem, isActive? style.navitem_active : null))}>
                     Горящие работы
                 </NavLink>
-                <NavLink to='/requests' className={useCallback(({isActive}) => classNames(style.navitem, isActive? style.navitem_active : null))}>
+                <div  className={classNames(style.navitem, style.disabled)} >
+                Запросы
+                </div>
+                {/* <NavLink to='/requests' disabled className={useCallback(({isActive}) => classNames(style.navitem, style.disabled, null))}>
                     Запросы
-                </NavLink>
+                </NavLink> */}
                 {auth.token === null ?
                     <div className={style.navitem} onClick={() => navigate("/login")}>Вход</div>
                     :

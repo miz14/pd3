@@ -2,7 +2,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 const ax = axios.create({
-    baseURL: '128.0.0.1:8000'
+    baseURL: 'https://vpashenko14.fvds.ru/api'
 })
 
 class Network {
@@ -37,7 +37,6 @@ class Network {
         return res
     }
     async get_my_data(token) {
-        console.log(token)
         const res = ax({
             method: 'get',
             url: '/users/me',
@@ -92,7 +91,6 @@ class Network {
         return res
     }
     async delete_lab_teacher(token, laboratory_id) {
-        console.log(laboratory_id)
         const res = ax({
             method: 'delete',
             url: '/laboratory/delete_laboratory_by_id',
@@ -143,7 +141,6 @@ class Network {
         return res
     }
     async update_discipline(token, discipline_id, group_id_list, teacher_id_list) {
-        console.log([discipline_id, group_id_list, teacher_id_list])
         const res = ax({
             method: 'patch',
             url: '/laboratory/update_discipline_for_teacher/',
@@ -216,6 +213,7 @@ class Network {
 
     async add_laboratory_student(token, id_lab, id_teacher, id_discipline, url) {
 
+
         const params = id_teacher != -1?{
             id_lab: id_lab,
             id_teacher: id_teacher,
@@ -239,7 +237,6 @@ class Network {
     }
 
     async get_all_student_laboratory_for_teacher(token, is_personally, discipline_id = null, group_id = null) {
-        console.log(is_personally)
         const res = ax({
             method: 'get',
             url: '/student_laboratory/get_all_student_laboratory_for_teacher',
@@ -255,7 +252,6 @@ class Network {
         return res
     }
     async get_all_student_laboratory_for_student(token, discipline_id = null) {
-        console.log([111, discipline_id])
         const res = ax({
             method: 'get',
             url: '/student_laboratory/get_all_student_laboratory_for_student',
@@ -296,6 +292,7 @@ class Network {
     }
     
     async repeat_student_laboratory(token, student_laboratory_id, url, id_teacher) {
+        console.log([student_laboratory_id, url, id_teacher])
         const params = id_teacher != -1?{
             student_laboratory_id: student_laboratory_id,
             id_teacher: id_teacher,
@@ -305,7 +302,6 @@ class Network {
             // id_teacher: null,
             url: url
         }
-        console.log(params)
         const res = ax({
             
             method: 'patch',

@@ -14,9 +14,14 @@ header {
         font-weight: 900;
         border-bottom: 2px solid var(--white-color-1);
     }
+    .disabled {
+        color: var(--bg-color-light);
+    }
     .navitem:hover {
-        border-bottom-color: var(--text-color-dark);
-        
+        border-bottom-color: var(--text-color-dark);     
+    }
+    .disabled:hover {
+        border-bottom-color: var(--white-color-1);
     }
     .navitem_active {
         border-bottom-color: var(--text-color-dark);

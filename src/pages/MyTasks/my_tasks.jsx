@@ -62,7 +62,6 @@ const MyTask = () => {
             selected_subject.id,
             teachers.map(el => Number(el.id))
         ).then(response => {
-            console.log(response)
             set_get_data(!get_data)
             set_add_discipline_active(false)
         })
@@ -77,7 +76,6 @@ const MyTask = () => {
                         acc[key] = [];
                     }
                     acc[key].push(curr);
-                    console.log(1)
                     return acc;
                 }, {})
 
@@ -101,11 +99,6 @@ const MyTask = () => {
             })
         }
     }, [get_data])
-
-    useEffect(() => {
-        console.log(left_data)
-    }, [left_data]
-    )
 
     const navigate = useNavigate()
     return (

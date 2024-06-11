@@ -29,7 +29,7 @@ const Task = () => {
             })
         } else if (auth.type === USER_TYPE.student) {
             network.get_discipline_student_info(auth.token, Number(params.id)).then(response => {
-                console.log(response)
+                console.log(response.data)
                 var data = response.data
                 data['name'] = data['subject']
                 delete data['subject']
@@ -74,7 +74,6 @@ const Task = () => {
             })
             network.get_all_teachers().then(response => {
                 if (response.status === 200) {
-                    console.log(response)
                     const tachers_data = response.data.map(element => {
                         return {
                             id: element.user_id,
@@ -201,14 +200,13 @@ const Task = () => {
 
     const open_edit_lab_student = (x) => {
         set_disabled_edit(x.status)
-        console.log(x)
         set_open_lab_data_student(x)
         if (x.url_student === null) {
             set_uses_url_student('')
         } else {
             set_uses_url_student(x.url_student)
         }
-
+        console.log(x)
         if (x.reviewers_id === null) {
             set_selected_teachers_student({ id: -1, name: 'Все' })
         } else {
@@ -219,10 +217,11 @@ const Task = () => {
     }
 
     const handler_lab_student = () => {
-        if (open_lab_data_student.valid === null) {
+        console.log(open_lab_data_student)
+        if (open_lab_data_student.student_laboratory_id === null) {
             network.add_laboratory_student(
                 auth.token,
-                open_lab_data_student.student_laboratory_id,
+                open_lab_data_student.laboratory_id,
                 selected_teachers_student.id,
                 data.discipline_id,
                 uses_url_student
@@ -236,7 +235,6 @@ const Task = () => {
                 uses_url_student,
                 selected_teachers_student.id
             ).then(response => {
-                console.log(444)
                 get_all_data()
             })
         }
@@ -339,11 +337,12 @@ const Task = () => {
                                 <>
 
                                     <div className={style.date}>
-                                        <div className={style.deadline}>{tranform_time(x.deadline)}</div>
+                                        
                                         {x.last_update_date != null?
                                         <div className={style.updatetime}>{tranform_time(x.last_update_date)}</div>
                                         :
                                         null}
+                                        <div className={style.deadline}>{tranform_time(x.deadline)}</div>
                                     
                                     </div>
                                     <div>{x.count_try}</div>

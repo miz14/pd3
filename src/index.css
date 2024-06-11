@@ -1,0 +1,121 @@
+:root {
+  font-family: "Roboto";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--white-color-1);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --text-color-dark: #353232;
+  --text-color-light: #f5f5f5;
+  --text-color-gray: #7c7c7c;
+
+  --white-color-1: white;
+  --white-color-2: #f3f3f3;
+
+
+  --bg-color-light: #e1e1e1;
+  --bg-color-light-dark: #cccbcb;
+
+  --theme-color-1: #00A1FC;
+  --theme-color-2: #ff3131;
+  --theme-color-3: #fc7a00;
+  --theme-color-4: #4fff40;
+
+  --theme-color-1-dark: #0089d8;
+  --theme-color-2-dark: #db3131;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  padding: 0 8px;
+  min-width: 1000px;
+  /* background: linear-gradient(#ffffff, #969696); */
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  background-color: var(--white-color-1);
+  color: var(----text-color-dark);
+  outline: none;
+  border: 1px solid var(--text-color-gray);
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px 10px;
+  font-family: 'Roboto';
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/Roboto-font/Roboto-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/Roboto-font/Roboto-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/Roboto-font/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/Roboto-font/Roboto-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/Roboto-font/Roboto-Black.ttf');
+}
+
+* {
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  border: 1px solid var(--text-color-dark);
+  /* border-bottom: none; */
+  min-height: 100vh;
+}
+
+.need_login {
+  margin: auto auto;
+  padding-bottom: 200px;
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--text-color-gray)
+}

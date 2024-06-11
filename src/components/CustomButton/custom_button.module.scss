@@ -1,0 +1,60 @@
+.big_button {
+    padding: 8px;
+    font-weight: 700;
+    font-size: 16px;   
+}
+.small_button {
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.default {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-gray);
+    border: none;
+    border-radius: 10px;
+    transition-property: background-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
+
+    // display: block;
+    min-width:auto !important;
+
+    // marig
+    // align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // min-width: ;
+}
+
+.default:hover {
+    background-color: var(--bg-color-light-dark);
+}
+
+.default:disabled:hover {
+    background-color: var(--bg-color-light);
+}
+
+
+
+.bg_color_1 {
+    background-color: var(--theme-color-1);
+    color: var(--white-color-1)
+}
+.bg_color_1:disabled:hover {
+    background-color: var(--theme-color-1);
+}
+.bg_color_1:hover {
+    background-color: var(--theme-color-1-dark);
+}
+.bg_color_2 {
+    background-color: var(--theme-color-2);
+    color: var(--white-color-1)
+}
+.bg_color_2:hover {
+    background-color: var(--theme-color-2-dark);
+}
+.bg_color_2:disabled:hover {
+    background-color: var(--theme-color-2);
+}

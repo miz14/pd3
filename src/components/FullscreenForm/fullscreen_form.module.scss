@@ -1,0 +1,24 @@
+.bg {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .diable_event {
+        pointer-events: none;
+    }
+
+    .form {
+        background-color: var(--white-color-1);
+        padding: 20px;
+        border-radius: 10px;
+        // la
+    }
+}
